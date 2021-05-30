@@ -77,7 +77,7 @@ namespace speech_translation
 
             // Translate speech
             string audioFile = System.IO.Directory.GetParent(@"../../../").FullName + "\\station.wav";
-            SoundPlayer wavPlayer = new SoundPlayer(audioFile);
+            SoundPlayer wavPlayer = new SoundPlayer(audioFile); 
             wavPlayer.Play();
             using AudioConfig audioConfig = AudioConfig.FromWavFileInput(audioFile);
             using TranslationRecognizer translator = new TranslationRecognizer(translationConfig, audioConfig);
